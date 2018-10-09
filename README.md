@@ -32,12 +32,12 @@ Downloads can be triggered by supplying the `{{url}}` of the requested video thr
 
 #### HTML
 
-Just navigate to `http://{{address}}:8080/youtube-dl` and enter the requested `{{url}}`.
+Just navigate to `http://{{address}}:8765/youtube-dl` and enter the requested `{{url}}`.
 
 #### Curl
 
 ```shell
-curl -X POST --data-urlencode "url={{url}}" http://{{address}}:8080/youtube-dl/q
+curl -X POST --data-urlencode "url={{url}}" http://{{address}}:8765/youtube-dl/q
 ```
 
 ## Implementation
