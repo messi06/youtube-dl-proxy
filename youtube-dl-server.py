@@ -37,7 +37,7 @@ def dl_worker():
 
 def download(url):
     print("Starting download of " + url)
-    subprocess.run(["youtube-dl", "-o", "/youtube-dl/.incomplete/%(title)s.%(ext)s", "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]", "--proxy", "http://192.168.1.8:8118", "--exec", "touch {} && mv {} /youtube-dl/", "--merge-output-format", "mp4", url])
+    subprocess.run(["youtube-dl", "-o", "/youtube-dl/.incomplete/%(title)s.%(ext)s", "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]", "--proxy", "http://192.168.1.8:8118", "--exec", "touch {} && mv {} /youtube-dl/", "--merge-output-format", "mp4", "--no-check-certificate", url])
     print("Finished downloading " + url)
 
 dl_q = Queue();
