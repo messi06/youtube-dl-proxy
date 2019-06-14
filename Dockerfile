@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM python:3-onbuild
+FROM python:alpine
 
 # Install ffmpeg.
 RUN \
